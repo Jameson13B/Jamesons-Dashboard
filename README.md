@@ -6,8 +6,6 @@
 
 This dashboard is a collection of my favorite things. Cooking and baking, brewing beer and cider, traveling, and finding awesome foods. This is a work in progress and is currently bare bones. Development is ongoing.
 
-<hr/>
-
 ## Available Scripts
 
 In the project directory, you can run:
@@ -30,13 +28,9 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-<hr />
-
 ## Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-<hr />
 
 ## Contact
 
