@@ -19,10 +19,10 @@ const Firebase = initializeApp(firebaseConfig)
 export const db = getFirestore(Firebase)
 export const COLLECTIONS = {
   RECIPES_BAKING: 'dashboard-recipes-baking',
+  BREW_UPDATES: 'dashboard-brew-updates',
   // Coming soon:
   // RECIPES_FAVORITE: 'dashboard-recipes-favorite',
   // BREW_RECIPES: 'dashboard-brew-recipes',
-  // BREW_UPDATES: 'dashboard-brew-updates',
   // TRAVEL_REPORTS: 'dashboard-travel-reports',
   // TRAVEL_GROUP: 'dashboard-travel-group',
   // EATS_FAVORITES: 'dashboard-eats-favorites',
