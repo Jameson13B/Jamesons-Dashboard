@@ -25,7 +25,9 @@ export default App
 
 const getStyles = () => ({
   appContainer: {
-    // textAlign: 'center',
+    background: 'black',
+    height: '100vh',
+    width: '100vw',
   },
   subHead: {
     marginBottom: 0,
