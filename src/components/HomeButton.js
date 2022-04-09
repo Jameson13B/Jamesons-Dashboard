@@ -20,7 +20,7 @@ const getStyles = () => ({
     height: '100vh',
     width: '25%',
     '&:hover': {
-      background: 'white',
+      background: '#222222',
       color: 'black',
     },
     '@media(max-width: 768px)': {
