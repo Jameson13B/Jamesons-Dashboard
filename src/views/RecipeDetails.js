@@ -63,7 +63,7 @@ export const RecipeDetails = (props) => {
 
 const getStyles = () => ({
   container: {
-    height: '100vh',
+    height: '100%',
     margin: '0 auto',
     maxWidth: '400px',
     padding: '15px',

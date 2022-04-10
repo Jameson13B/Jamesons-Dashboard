@@ -30,7 +30,7 @@ export default App
 const getStyles = () => ({
   appContainer: {
     background: 'black',
-    height: '100vh',
-    width: '100vw',
+    height: '100%',
+    width: '100%',
   },
 })

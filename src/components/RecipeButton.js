@@ -18,7 +18,7 @@ const getStyles = () => ({
     background: 'transparent',
     borderStyle: 'none',
     cursor: 'pointer',
-    height: '100vh',
+    height: '100%',
     maxWidth: '33%',
     flex: 5,
     '&:hover': {
@@ -40,7 +40,7 @@ const getStyles = () => ({
     background: 'linear-gradient(to right, #E1FF31, #8DFFA8)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
-    fontSize: '45px',
+    fontSize: '2.75em',
     textShadow: '0 0 10px #8DFFA8',
   },
   pill: {

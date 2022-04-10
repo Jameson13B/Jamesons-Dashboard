@@ -21,6 +21,7 @@ export const Home = (props) => {
 const getStyles = () => ({
   container: css({
     display: 'flex',
+    height: '100%',
     '@media(max-width: 768px)': {
       flexDirection: 'column',
     },

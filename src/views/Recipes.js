@@ -104,6 +104,7 @@ export const Recipes = () => {
 const getStyles = () => ({
   container: {
     display: 'flex',
+    height: '100%',
     '@media(max-width: 768px)': {
       flexDirection: 'column',
       height: '100%',
@@ -113,7 +114,7 @@ const getStyles = () => ({
     background: 'transparent',
     borderStyle: 'none',
     cursor: 'pointer',
-    height: '100vh',
+    height: '100%',
     padding: '0',
     flex: 1,
     maxWidth: '50px',

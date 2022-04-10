@@ -20,7 +20,7 @@ const getStyles = () => ({
     background: 'black',
     borderStyle: 'none',
     cursor: 'pointer',
-    height: '100vh',
+    height: '100%',
     width: '25%',
     '&:hover': {
       background: '#222222',
@@ -28,7 +28,7 @@ const getStyles = () => ({
     },
     '@media(max-width: 768px)': {
       width: '100%',
-      height: '25vh',
+      height: '25%',
     },
     // Flexbox
     display: 'flex',
@@ -40,7 +40,7 @@ const getStyles = () => ({
     background: 'linear-gradient(to right, #E1FF31, #8DFFA8)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
-    fontSize: '45px',
+    fontSize: '3em',
     textShadow: '0 0 10px #8DFFA8',
   },
 })
