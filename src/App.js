@@ -3,6 +3,7 @@ import { Route, Switch } from 'wouter'
 
 import { Home } from './views/Home'
 import { Recipes } from './views/Recipes'
+import { UtilityButton } from './components/UtilityButton'
 
 function App() {
   const styles = getStyles()
@@ -17,6 +18,7 @@ function App() {
           <Recipes />
         </Route>
       </Switch>
+      <UtilityButton content="🏠" path="/" position="left" />
     </div>
   )
 }
@@ -28,12 +30,5 @@ const getStyles = () => ({
     background: 'black',
     height: '100vh',
     width: '100vw',
-  },
-  subHead: {
-    marginBottom: 0,
-  },
-  unorderdList: {
-    textAlign: 'left',
-    marginBottom: 20,
   },
 })
