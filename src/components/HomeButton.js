@@ -6,7 +6,10 @@ export const HomeButton = (props) => {
   const styles = getStyles()
 
   return (
-    <button className={css(styles.container)} onClick={() => (onClick ? onClick() : alert(title))}>
+    <button
+      className={css(styles.container)}
+      onClick={() => (onClick ? onClick() : alert(`${title}: Coming Soon!!`))}
+    >
       <h1 style={styles.title}>{title}</h1>
     </button>
   )

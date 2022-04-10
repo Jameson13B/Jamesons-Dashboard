@@ -73,7 +73,7 @@ export const Recipes = () => {
   }
 
   if (recipes.length === 0) {
-    return <h1 style={styles.title}>Loading...</h1>
+    return <h1 style={styles.loading}>Loading...</h1>
   }
 
   return (
@@ -137,11 +137,12 @@ const getStyles = () => ({
       width: '100%',
     },
   },
-  title: {
+  loading: {
     // The next three styles create gradient text
     background: 'linear-gradient(to right, #E1FF31, #8DFFA8)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
+    marginTop: 0,
   },
   description: {
     // The next three styles create gradient text

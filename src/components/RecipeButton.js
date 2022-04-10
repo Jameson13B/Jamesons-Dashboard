@@ -6,7 +6,10 @@ export const RecipeButton = (props) => {
   const styles = getStyles()
 
   return (
-    <button className={css(styles.container)} onClick={() => alert(recipe.name)}>
+    <button
+      className={css(styles.container)}
+      onClick={() => alert(`${recipe.name}: Coming Soon!!`)}
+    >
       <h1 style={styles.title}>{recipe.name}</h1>
     </button>
   )
