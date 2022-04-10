@@ -2,15 +2,13 @@ import React from 'react'
 import { css } from 'glamor'
 
 export const RecipeButton = (props) => {
-  const { recipe } = props
+  const { onClick, recipe } = props
   const styles = getStyles()
 
   return (
-    <button
-      className={css(styles.container)}
-      onClick={() => alert(`${recipe.name}: Coming Soon!!`)}
-    >
+    <button className={css(styles.container)} onClick={onClick}>
       <h1 style={styles.title}>{recipe.name}</h1>
+      <span style={styles.pill}>{recipe.type}</span>
     </button>
   )
 }
@@ -34,6 +32,7 @@ const getStyles = () => ({
     // Flexbox
     display: 'flex',
     alignItems: 'center',
+    flexDirection: 'column',
     justifyContent: 'center',
   },
   title: {
@@ -43,5 +42,12 @@ const getStyles = () => ({
     WebkitTextFillColor: 'transparent',
     fontSize: '45px',
     textShadow: '0 0 10px #8DFFA8',
+  },
+  pill: {
+    background: 'linear-gradient(to right, #E1FF31, #8DFFA8)',
+    borderRadius: '20px',
+    padding: '6px 8px',
+    fontSize: '.9em',
+    fontWeight: '600',
   },
 })

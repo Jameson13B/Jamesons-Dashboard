@@ -9,15 +9,17 @@ import {
   query,
 } from 'firebase/firestore'
 import { css } from 'glamor'
+import { useLocation } from 'wouter'
 
 import { db, COLLECTIONS } from '../utils/firebase'
 import { RecipeButton } from '../components/RecipeButton'
 
 export const Recipes = () => {
+  const [_, setLocation] = useLocation() // eslint-disable-line no-unused-vars
   const [recipes, setRecipes] = useState([])
-  const styles = getStyles()
   const [startDoc, setStartDoc] = useState(null)
   const [last, setLast] = useState(null)
+  const styles = getStyles()
 
   useEffect(() => {
     const collectionRef = query(
@@ -84,7 +86,11 @@ export const Recipes = () => {
         </button>
       )}
       {recipes.map((recipe) => (
-        <RecipeButton key={recipe.id} recipe={recipe} />
+        <RecipeButton
+          key={recipe.id}
+          onClick={() => setLocation(`/recipes/${recipe.id}`)}
+          recipe={recipe}
+        />
       ))}
       {recipes.length === 3 && (
         <button className={css(styles.navButton)} onClick={getMore}>

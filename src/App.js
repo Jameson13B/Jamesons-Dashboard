@@ -3,6 +3,7 @@ import { Route, Switch } from 'wouter'
 
 import { Home } from './views/Home'
 import { Recipes } from './views/Recipes'
+import { RecipeDetails } from './views/RecipeDetails'
 import { UtilityButton } from './components/UtilityButton'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/recipes">
           <Recipes />
         </Route>
+        <Route path="/recipes/:id">{(params) => <RecipeDetails recipeId={params.id} />}</Route>
       </Switch>
       <UtilityButton content="🏠" path="/" position="left" />
     </div>
