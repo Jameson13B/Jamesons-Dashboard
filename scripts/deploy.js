@@ -18,7 +18,7 @@ const logError = (text) => console.log(colors.red(text))
 const exec = require('child_process').execSync
 const execPrint = (command) => {
   logCommand(`Running: ${colors.bold(command)}`)
-  // exec(command, { stdio: 'inherit' })
+  exec(command, { stdio: 'inherit' })
 }
 const currentBranch = getCurrentBranch()
 
