@@ -8,9 +8,10 @@ const positions = ['left', 'right']
 export const UtilityButtons = (props) => {
   const { buttons, position = 'left' } = props
   const [open, toggleOpen] = useState(false)
-  const [_, setLocation] = useLocation() // eslint-disable-line no-unused-vars
+  const [location, setLocation] = useLocation() // eslint-disable-line no-unused-vars
   const drawerRef = useRef()
   const styles = getStyles()
+  console.log('location', location)
 
   useEffect(() => {
     // Temporary not of position prop:
@@ -21,6 +22,15 @@ export const UtilityButtons = (props) => {
     //   console.error('Position Error: Please choose from ["left", "right"]')
     // }
   }, [position])
+
+  useEffect(() => {
+    if (open) {
+      setTimeout(() => {
+        drawerRef.current.style.transform = 'translate(0px, 0px)'
+        toggleOpen(false)
+      }, 2000)
+    }
+  }, [open])
 
   if (!positions.includes(position)) {
     return <p style={styles.error}>Position Error</p>
@@ -49,6 +59,7 @@ export const UtilityButtons = (props) => {
           style={{
             ...styles.homeButton,
             background: button.color ?? 'slategrey',
+            boxShadow: location === button.path ? '0px 0px 10px black' : 'none',
           }}
         >
           {button.content}
