@@ -26,7 +26,7 @@ export const RecipeDetails = (props) => {
 
   if (!recipe) {
     return (
-      <div style={styles.container}>
+      <div className={css(styles.container)}>
         <h1 style={styles.name}>Loading...</h1>
       </div>
     )
@@ -83,6 +83,7 @@ const getStyles = () => ({
     height: '100%',
     margin: '0 auto',
     maxWidth: '400px',
+    overflow: 'auto',
     padding: '15px',
     width: '100vw',
     '& p, td, li, li::before': {

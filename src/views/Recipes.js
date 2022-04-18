@@ -20,12 +20,13 @@ export const Recipes = () => {
   const [startDoc, setStartDoc] = useState(null)
   const [last, setLast] = useState(null)
   const styles = getStyles()
+  const recipesPerPage = 4
 
   useEffect(() => {
     const collectionRef = query(
       collection(db, COLLECTIONS.RECIPES_BAKING),
       orderBy('name'),
-      limit(3),
+      limit(recipesPerPage),
     )
 
     getDocs(collectionRef).then((snapshots) => {
@@ -43,7 +44,7 @@ export const Recipes = () => {
     const next = query(
       collection(db, COLLECTIONS.RECIPES_BAKING),
       orderBy('name'),
-      limit(3),
+      limit(recipesPerPage),
       endBefore(last),
     )
 
@@ -60,7 +61,7 @@ export const Recipes = () => {
     const next = query(
       collection(db, COLLECTIONS.RECIPES_BAKING),
       orderBy('name'),
-      limit(3),
+      limit(recipesPerPage),
       startAfter(last),
     )
 
@@ -75,7 +76,11 @@ export const Recipes = () => {
   }
 
   if (recipes.length === 0) {
-    return <h1 style={styles.loading}>Loading...</h1>
+    return (
+      <div className={css(styles.container)}>
+        <h1 style={styles.loading}>Loading...</h1>
+      </div>
+    )
   }
 
   return (
